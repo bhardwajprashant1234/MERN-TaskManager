@@ -14,7 +14,7 @@ Before running the server locally make sure you have the following installed:
 ## Installation
 ### Clone the repository OR Download Zip File:
 ```
-git clone https://github.com/SHREYK213/MERN-stack_TaskHive
+git clone https://github.com/bhardwajprashant1234/MERN-TaskManager
 ```
 ## Install all the dependencies:
 ```bash
