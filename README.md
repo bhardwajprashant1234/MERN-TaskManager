@@ -9,8 +9,7 @@ Before running the server locally make sure you have the following installed:
 2. MongoDB (To store the data of User)
 
 ## Landing Page
-![Screenshot (22)](https://github.com/SHREYK213/MERN-stack_TaskHive/assets/98221778/ffabb4d7-b56d-4b49-a79a-0b8db86ef270)
-
+![1](https://github.com/bhardwajprashant1234/MERN-TaskManager/assets/115651905/d5c97afe-6acf-4636-8b6d-02e163b6ace6)
 
 ## Installation
 ### Clone the repository:
@@ -50,12 +49,12 @@ Access the app at http://localhost:3000.
   - `DELETE /tasks/:id` - Delete a specific task
 
 ## Login/Signup
-![Screenshot (23)](https://github.com/SHREYK213/MERN-stack_TaskHive/assets/98221778/c7c68475-c634-4024-aa55-1bc6c7738638)
+![2](https://github.com/bhardwajprashant1234/MERN-TaskManager/assets/115651905/81afb060-9a44-4ed7-ae67-20dd4a18f057)
 ## User Dashboard
-![Screenshot (24)](https://github.com/SHREYK213/MERN-stack_TaskHive/assets/98221778/3201ca61-ad52-43b7-85f8-76d805d76b34)
+![User](https://github.com/bhardwajprashant1234/MERN-TaskManager/assets/115651905/d516abd4-d81f-40c3-b41d-4a3fb6c17213)
 ## Task Creation
-![Screenshot (25)](https://github.com/SHREYK213/MERN-stack_TaskHive/assets/98221778/3314364d-bf70-4518-8dcd-c62248aa55c9)
-![Screenshot (26)](https://github.com/SHREYK213/MERN-stack_TaskHive/assets/98221778/7ed9dbd8-e26c-429c-a767-953577713d02)
+
+![3](https://github.com/bhardwajprashant1234/MERN-TaskManager/assets/115651905/3378d60d-00a8-4956-bee1-a9994130cf82)
 
 For detailed documentation of each endpoint and request/response examples, please refer to the API documentation provided with this repository.
 
