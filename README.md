@@ -3,21 +3,13 @@
 ### This is a Task Manager app built using the MERN stack (MongoDB, Express.js, React, Node.js).
 
 ### Prerequisites
-Before running the server, make sure you have the following installed:
+Before running the server locally make sure you have the following installed:
 
-1. Node.js (v12 or higher)
-2. MongoDB (local or remote)
+1. Node.js (Current version)
+2. MongoDB (To store the data of User)
 
 ## Landing Page
 ![Screenshot (22)](https://github.com/SHREYK213/MERN-stack_TaskHive/assets/98221778/ffabb4d7-b56d-4b49-a79a-0b8db86ef270)
-
-### Features
-- User authentication and authorization using JSON Web Tokens (JWT).
-- CRUD operations for managing tasks.
-- User registration and login functionality.
-  - User registration with email verification.
-  - Password reset feature.
-- Secure password storage using bcrypt hashing algorithm.
 
 
 ## Installation
@@ -27,14 +19,12 @@ git clone https://github.com/SHREYK213/MERN-stack_TaskHive
 ```
 ## Install the dependencies:
 ```bash
-npm install-all
+npm install
 ```
 ## Create a .env file in the project root directory and set the following environment variables:
 ```
 MONGODB_URL = your-mongodb-url
-ACCESS_TOKEN_SECRET = Rj2S?RVe9[]8-dCS6A**&b5Tsg$gwbg~Bd{*QTK
-SMTP_USER=
-SMTP_PASS=
+ACCESS_TOKEN_SECRET = Your JWT secret key
 ```
 ## Start the server:
 ```bash
