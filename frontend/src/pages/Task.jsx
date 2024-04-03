@@ -87,15 +87,21 @@ const Task = () => {
   return (
     <>
       <MainLayout>
-        <form className='m-auto my-16 max-w-[1000px] bg-white p-8 border-2 shadow-md rounded-md'>
+      <form className='m-auto my-16 max-w-[1000px] bg-gradient-to-r from-cyan-300 via-gray-400 to-orange-300 p-8 border-2 shadow-md rounded-md'>
+
+
+
           {loading ? (
             <Loader />
           ) : (
             <>
-              <h2 className='text-center mb-4'>{mode === "add" ? "Add New Task" : "Edit Task"}</h2>
+              <h2 className={`text-center mb-4 ${mode === "add" ? "font-bold italic underline" : ""}`}>
+  {mode === "add" ? <strong><em><u>Add a New Task</u></em></strong> : "Edit Your Task"}
+</h2>
+
               <div className="mb-4">
-                <label htmlFor="description">Description</label>
-                <Textarea type="description" name="description" id="description" value={formData.description} placeholder="Write here.." onChange={handleChange} />
+                <label htmlFor="description">Enter Your Task Description</label>
+                <Textarea type="description" name="description" id="description" value={formData.description} placeholder="Start Writing Your Tasks..." onChange={handleChange} />
                 {fieldError("description")}
               </div>
 
