@@ -1,43 +1,50 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import useFetch from '../hooks/useFetch';
-import validateManyFields from '../validations';
-import Input from './utils/Input';
-import Loader from './utils/Loader';
+import React, { useState } from 'react'; // Importing React library and useState hook
+import { Link, useNavigate } from 'react-router-dom'; // Importing Link and useNavigate from react-router-dom
+import useFetch from '../hooks/useFetch'; // Importing custom hook for fetching data
+import validateManyFields from '../validations'; // Importing validation function
+import Input from './utils/Input'; // Importing Input component
+import Loader from './utils/Loader'; // Importing Loader component
 
+// Signup form component
 const SignupForm = () => {
 
+  // State for form errors and form data
   const [formErrors, setFormErrors] = useState({});
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: ""
   });
-  const [fetchData, { loading }] = useFetch();
-  const navigate = useNavigate();
 
+  // Custom hook for fetching data
+  const [fetchData, { loading }] = useFetch();
+  const navigate = useNavigate(); // Accessing navigation function from react-router-dom
+
+  // Handle form input changes
   const handleChange = e => {
     setFormData({
       ...formData, [e.target.name]: e.target.value
     });
   }
 
+  // Handle form submission
   const handleSubmit = e => {
     e.preventDefault();
-    const errors = validateManyFields("signup", formData);
-    setFormErrors({});
+    const errors = validateManyFields("signup", formData); // Validate form fields
+    setFormErrors({}); // Clear previous form errors
     if (errors.length > 0) {
-      setFormErrors(errors.reduce((total, ob) => ({ ...total, [ob.field]: ob.err }), {}));
+      setFormErrors(errors.reduce((total, ob) => ({ ...total, [ob.field]: ob.err }), {})); // Set form errors
       return;
     }
 
-    const config = { url: "/auth/signup", method: "post", data: formData };
+    const config = { url: "/auth/signup", method: "post", data: formData }; // API request configuration
     fetchData(config).then(() => {
-      navigate("/login");
+      navigate("/login"); // Redirect to login page after successful signup
     });
 
   }
 
+  // Render field error message if exists
   const fieldError = (field) => (
     <p className={`mt-1 text-pink-600 text-sm ${formErrors[field] ? "block" : "hidden"}`}>
       <i className='mr-2 fa-solid fa-circle-exclamation'></i>
@@ -49,7 +56,7 @@ const SignupForm = () => {
     <>
       <form className='m-auto my-16 max-w-[500px] p-8 bg-cyan-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-green-400'>
         {loading ? (
-          <Loader />
+          <Loader /> // Show loader if loading state is true
         ) : (
           <>
             <h2 className='text-center mb-4'>SignUp TaskHub</h2>
@@ -85,4 +92,4 @@ const SignupForm = () => {
   )
 }
 
-export default SignupForm
+export default SignupForm; // Export SignupForm component
