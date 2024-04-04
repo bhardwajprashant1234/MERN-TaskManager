@@ -11,7 +11,7 @@ Before running the server locally make sure you have the following installed:
 ## Landing Page
 ![1](https://github.com/bhardwajprashant1234/MERN-TaskManager/assets/115651905/d5c97afe-6acf-4636-8b6d-02e163b6ace6)
 
-## Installation
+## Installation to run locally
 ### Clone the repository OR Download Zip File:
 ```
 git clone https://github.com/bhardwajprashant1234/MERN-TaskManager
